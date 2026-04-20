@@ -148,12 +148,12 @@ st.markdown("""
 
 # --- App Backend Initialization ---
 @st.cache_resource
-def initialize_ai():
+def initialize_ai_v2():
     model_path = "model/best_model_hybrid.pt"
     model, class_names = load_model(model_path)
     return model, class_names
 
-model, class_names = initialize_ai()
+model, class_names = initialize_ai_v2()
 
 # --- Main Layout ---
 st.markdown('<div class="hero-title">Smart Plant Disease Diagnosis </div>', unsafe_allow_html=True)
